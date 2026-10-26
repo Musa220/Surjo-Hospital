@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surjo Medical Hospital - Reports</title>
+  <meta name="theme-color" content="#0d2b2e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230d2b2e'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23ffa726'/%3E%3Cpath d='M16 4.5v3M16 24.5v3M4.5 16h3M24.5 16h3M7.9 7.9l2.1 2.1M22 22l2.1 2.1M7.9 24.1l2.1-2.1M22 10l2.1-2.1' stroke='%23ffa726' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>(function(){try{var t=localStorage.getItem('smh_theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-reports">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-sun-mark" viewBox="0 0 32 32"><circle cx="16" cy="16" r="5.5" fill="currentColor" stroke="none"/><path d="M16 4.5v3M16 24.5v3M4.5 16h3M24.5 16h3M7.9 7.9l2.1 2.1M22 22l2.1 2.1M7.9 24.1l2.1-2.1M22 10l2.1-2.1"/></symbol>
+    <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></symbol>
+    <symbol id="i-patients" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></symbol>
+    <symbol id="i-visits" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+    <symbol id="i-lab" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+    <symbol id="i-billing" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+    <symbol id="i-banknote" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></symbol>
+    <symbol id="i-reports" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-ai" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  </defs>
+</svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+          <span class="brand-mark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun-mark"/></svg></span>
+          <span class="brand-text"><span class="brand-name">Surjo</span><span class="brand-sub">Medical Hospital</span></span>
+        </a>
+
+      <nav class="main-nav" aria-label="Pages">
+        <a href="index.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-dashboard"/></svg><span>Dashboard</span></a>
+        <div class="nav-sep" role="presentation"></div>
+        <a href="patients.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-patients"/></svg><span>Patients</span></a>
+        <a href="visits.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-visits"/></svg><span>Doctor Visits</span></a>
+        <a href="lab.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lab"/></svg><span>Lab Orders</span></a>
+        <div class="nav-sep" role="presentation"></div>
+        <a href="billing.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-billing"/></svg><span>Billing &amp; Ledger</span></a>
+        <a href="reports.html" class="active" aria-current="page"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-reports"/></svg><span>Reports</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="ai-chat.html" class="ai-card">
+          <span class="ai-spark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-ai"/></svg></span>
+          <span><strong>AI Assistant</strong><small>Ask questions about your reports in plain words</small></span>
+        </a>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="app-main">
+      <header class="topbar">
+        <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+        <a href="index.html" class="brand topbar-brand">
+          <span class="brand-mark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun-mark"/></svg></span>
+          <span class="brand-text"><span class="brand-name">Surjo</span><span class="brand-sub">Medical Hospital</span></span>
+        </a>
+        <nav class="crumbs" aria-label="Breadcrumb"><span>Surjo Medical Hospital</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg><strong>Reports</strong></nav>
+        <form class="top-search" role="search" action="patients.html" method="get">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+          <input type="search" name="q" placeholder="Find a patient by name, ID or phone" aria-label="Find a patient by name, ID or phone" autocomplete="off">
+          <kbd aria-hidden="true">/</kbd>
+        </form>
+        <div class="top-actions">
+          <span class="date-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span id="top-date"></span></span>
+          <button type="button" class="icon-btn theme-toggle" aria-label="Switch to dark theme">
+            <span class="when-light"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg></span>
+            <span class="when-dark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></span>
+          </button>
+          <span class="avatar-chip"><span class="face"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-user"/></svg></span><span class="who">Front desk<small>Reception</small></span></span>
+        </div>
+      </header>
+
+      <main class="main-content" id="main">
+        <div id="report-alert" class="toast-slot" role="status" aria-live="polite"></div>
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Hospital Analytical Reports</h1>
+        <p class="page-subtitle">Standard operational, audit, doctor activity, and revenue breakdown reports</p>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="reports-tabs">
+      <button type="button" class="tab-btn active" data-tab="collection">Daily Collection</button>
+      <button type="button" class="tab-btn" data-tab="patients">Patient List</button>
+      <button type="button" class="tab-btn" data-tab="doctors">Doctor-wise</button>
+      <button type="button" class="tab-btn" data-tab="lab">Lab Tests</button>
+      <button type="button" class="tab-btn" data-tab="discounts">Discounts</button>
+      <button type="button" class="tab-btn" data-tab="dues">Outstanding Dues</button>
+    </div>
+
+    <!-- TAB 1: DAILY COLLECTION -->
+    <section id="pane-collection" class="report-pane active">
+      <div class="print-header">
+        <h2 style="margin: 0; font-size: 1.25rem;">Surjo Medical Hospital</h2>
+        <h3 style="margin: 0.25rem 0; font-size: 1rem;">Daily Collection & Revenue Report</h3>
+        <p id="print-range-collection" style="margin: 0; font-size: 0.85rem; color: #555;"></p>
+      </div>
+
+      <div class="report-filter-bar">
+        <div class="filter-group">
+          <label for="filter-coll-from">From Date</label>
+          <input type="date" id="filter-coll-from">
+        </div>
+        <div class="filter-group">
+          <label for="filter-coll-to">To Date</label>
+          <input type="date" id="filter-coll-to">
+        </div>
+        <button type="button" id="btn-coll-filter" class="btn btn-secondary">Filter</button>
+        <button type="button" class="btn btn-secondary btn-export-report" style="margin-left: auto;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>Export CSV</button>
+        <button type="button" class="btn btn-primary btn-print-report"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-printer"/></svg>Print report</button>
+      </div>
+
+      <div class="breakdown-grid">
+        <div class="breakdown-card">
+          <div class="label">Total Collected (net of refunds)</div>
+          <div class="val" id="coll-total-collected">Tk 0</div>
+        </div>
+        <div class="breakdown-card">
+          <div class="label">Visit Fees Collected</div>
+          <div class="val" id="coll-total-visit">Tk 0</div>
+        </div>
+        <div class="breakdown-card">
+          <div class="label">Lab Fees Collected</div>
+          <div class="val" id="coll-total-lab">Tk 0</div>
+        </div>
+        <div class="breakdown-card">
+          <div class="label">Refunds Paid Out</div>
+          <div class="val" id="coll-total-refunded">Tk 0</div>
+        </div>
+        <div class="breakdown-card discount">
+          <div class="label">Discounts Allowed</div>
+          <div class="val" id="coll-total-discount">Tk 0</div>
+        </div>
+        <div class="breakdown-card due">
+          <div class="label">System Total Due</div>
+          <div class="val" id="coll-total-due">Tk 0</div>
+        </div>
+      </div>
+
+      <div class="breakdown-grid" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+        <div class="breakdown-card">
+          <div class="label">Cash Payments</div>
+          <div class="val" id="coll-method-cash">Tk 0</div>
+        </div>
+        <div class="breakdown-card">
+          <div class="label">Card Payments</div>
+          <div class="val" id="coll-method-card">Tk 0</div>
+        </div>
+        <div class="breakdown-card">
+          <div class="label">bKash Payments</div>
+          <div class="val" id="coll-method-bkash">Tk 0</div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Receipt ID</th>
+              <th>Patient</th>
+              <th>Method</th>
+              <th style="text-align: right;">Visit Amount</th>
+              <th style="text-align: right;">Lab Amount</th>
+              <th style="text-align: right;">Total Paid</th>
+            </tr>
+          </thead>
+          <tbody id="coll-table-body"></tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="4">TOTAL</td>
+              <td id="coll-foot-visit" style="text-align: right;">Tk 0</td>
+              <td id="coll-foot-lab" style="text-align: right;">Tk 0</td>
+              <td id="coll-foot-total" style="text-align: right;">Tk 0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 2: PATIENT LIST -->
+    <section id="pane-patients" class="report-pane">
+      <div class="print-header">
+        <h2 style="margin: 0; font-size: 1.25rem;">Surjo Medical Hospital</h2>
+        <h3 style="margin: 0.25rem 0; font-size: 1rem;">Registered Patients Registry Report</h3>
+        <p id="print-range-patients" style="margin: 0; font-size: 0.85rem; color: #555;"></p>
+      </div>
+
+      <div class="report-filter-bar">
+        <div class="filter-group">
+          <label for="filter-pat-from">From Date</label>
+          <input type="date" id="filter-pat-from">
+        </div>
+        <div class="filter-group">
+          <label for="filter-pat-to">To Date</label>
+          <input type="date" id="filter-pat-to">
+        </div>
+        <button type="button" id="btn-pat-filter" class="btn btn-secondary">Filter</button>
+        <button type="button" class="btn btn-secondary btn-export-report" style="margin-left: auto;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>Export CSV</button>
+        <button type="button" class="btn btn-primary btn-print-report"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-printer"/></svg>Print report</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Patient ID</th>
+              <th>Full Name</th>
+              <th>Age / Sex</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Registered Date</th>
+            </tr>
+          </thead>
+          <tbody id="pat-table-body"></tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="2" id="pat-foot-count">Total: 0 patients</td>
+              <td colspan="4" id="pat-foot-split" style="text-align: right;">Male: 0 | Female: 0 | Other: 0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 3: DOCTOR-WISE -->
+    <section id="pane-doctors" class="report-pane">
+      <div class="print-header">
+        <h2 style="margin: 0; font-size: 1.25rem;">Surjo Medical Hospital</h2>
+        <h3 style="margin: 0.25rem 0; font-size: 1rem;">Doctor Consultation & Activity Report</h3>
+        <p id="print-range-doctors" style="margin: 0; font-size: 0.85rem; color: #555;"></p>
+      </div>
+
+      <div class="report-filter-bar">
+        <div class="filter-group">
+          <label for="filter-doc-from">From Date</label>
+          <input type="date" id="filter-doc-from">
+        </div>
+        <div class="filter-group">
+          <label for="filter-doc-to">To Date</label>
+          <input type="date" id="filter-doc-to">
+        </div>
+        <button type="button" id="btn-doc-filter" class="btn btn-secondary">Filter</button>
+        <button type="button" class="btn btn-secondary btn-export-report" style="margin-left: auto;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>Export CSV</button>
+        <button type="button" class="btn btn-primary btn-print-report"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-printer"/></svg>Print report</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Doctor Name</th>
+              <th>Specialty</th>
+              <th style="text-align: right;">Visits Handled</th>
+              <th style="text-align: right;">Total Consultation Fees</th>
+            </tr>
+          </thead>
+          <tbody id="doc-table-body"></tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="2">TOTAL</td>
+              <td id="doc-foot-visits" style="text-align: right;">0</td>
+              <td id="doc-foot-fees" style="text-align: right;">Tk 0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 4: LAB TESTS -->
+    <section id="pane-lab" class="report-pane">
+      <div class="print-header">
+        <h2 style="margin: 0; font-size: 1.25rem;">Surjo Medical Hospital</h2>
+        <h3 style="margin: 0.25rem 0; font-size: 1rem;">Diagnostic Laboratory Activity Report</h3>
+        <p id="print-range-lab" style="margin: 0; font-size: 0.85rem; color: #555;"></p>
+      </div>
+
+      <div class="report-filter-bar">
+        <div class="filter-group">
+          <label for="filter-lab-from">From Date</label>
+          <input type="date" id="filter-lab-from">
+        </div>
+        <div class="filter-group">
+          <label for="filter-lab-to">To Date</label>
+          <input type="date" id="filter-lab-to">
+        </div>
+        <button type="button" id="btn-lab-filter" class="btn btn-secondary">Filter</button>
+        <button type="button" class="btn btn-secondary btn-export-report" style="margin-left: auto;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>Export CSV</button>
+        <button type="button" class="btn btn-primary btn-print-report"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-printer"/></svg>Print report</button>
+      </div>
+
+      <div class="breakdown-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+        <div class="breakdown-card">
+          <div class="label">Total Tests Ordered</div>
+          <div class="val" id="lab-stat-total">0</div>
+        </div>
+        <div class="breakdown-card">
+          <div class="label">Completed (Done)</div>
+          <div class="val" id="lab-stat-completed">0</div>
+        </div>
+        <div class="breakdown-card due">
+          <div class="label">Pending Tests</div>
+          <div class="val" id="lab-stat-pending">0</div>
+        </div>
+        <div class="breakdown-card">
+          <div class="label">Cancelled Orders</div>
+          <div class="val" id="lab-stat-cancelled">0</div>
+        </div>
+        <div class="breakdown-card discount">
+          <div class="label">Test Discounts Given</div>
+          <div class="val" id="lab-stat-discount">Tk 0</div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Test Code</th>
+              <th>Test Name</th>
+              <th style="text-align: right;">Total Orders</th>
+              <th style="text-align: right;">Total Test Value</th>
+            </tr>
+          </thead>
+          <tbody id="lab-table-body"></tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="2">TOTAL</td>
+              <td id="lab-foot-orders" style="text-align: right;">0</td>
+              <td id="lab-foot-price" style="text-align: right;">Tk 0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 5: DISCOUNTS -->
+    <section id="pane-discounts" class="report-pane">
+      <div class="print-header">
+        <h2 style="margin: 0; font-size: 1.25rem;">Surjo Medical Hospital</h2>
+        <h3 style="margin: 0.25rem 0; font-size: 1rem;">Discounts &amp; Waivers Report</h3>
+        <p id="print-range-discounts" style="margin: 0; font-size: 0.85rem; color: #555;"></p>
+      </div>
+
+      <div class="report-filter-bar">
+        <div class="filter-group">
+          <label for="filter-disc-from">From Date</label>
+          <input type="date" id="filter-disc-from">
+        </div>
+        <div class="filter-group">
+          <label for="filter-disc-to">To Date</label>
+          <input type="date" id="filter-disc-to">
+        </div>
+        <button type="button" id="btn-disc-filter" class="btn btn-secondary">Filter</button>
+        <button type="button" class="btn btn-secondary btn-export-report" style="margin-left: auto;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>Export CSV</button>
+        <button type="button" class="btn btn-primary btn-print-report"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-printer"/></svg>Print report</button>
+      </div>
+
+      <div class="breakdown-grid" style="grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));">
+        <div class="breakdown-card discount">
+          <div class="label">Total Discounts</div>
+          <div class="val" id="disc-total">Tk 0</div>
+        </div>
+        <div class="breakdown-card">
+          <div class="label">Billing Discounts</div>
+          <div class="val" id="disc-billing">Tk 0</div>
+        </div>
+        <div class="breakdown-card">
+          <div class="label">Lab Test Discounts</div>
+          <div class="val" id="disc-labtest">Tk 0</div>
+        </div>
+      </div>
+      <p class="report-note">Billing discounts are waivers given on the Billing page (listed below, voided ones left out). Lab test discounts are price reductions given when a test was ordered. Discounts are not money collected.</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Discount ID</th>
+              <th>Patient</th>
+              <th>Applied To</th>
+              <th style="text-align: right;">Visit</th>
+              <th style="text-align: right;">Lab</th>
+              <th style="text-align: right;">Total</th>
+              <th>Reason</th>
+              <th>Approved By</th>
+            </tr>
+          </thead>
+          <tbody id="disc-table-body"></tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="4">TOTAL BILLING DISCOUNTS</td>
+              <td id="disc-foot-visit" style="text-align: right;">Tk 0</td>
+              <td id="disc-foot-lab" style="text-align: right;">Tk 0</td>
+              <td id="disc-foot-total" style="text-align: right;">Tk 0</td>
+              <td colspan="2"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 6: OUTSTANDING DUES -->
+    <section id="pane-dues" class="report-pane">
+      <div class="print-header">
+        <h2 style="margin: 0; font-size: 1.25rem;">Surjo Medical Hospital</h2>
+        <h3 style="margin: 0.25rem 0; font-size: 1rem;">Outstanding Patient Dues Audit Report</h3>
+        <p id="print-range-dues" style="margin: 0; font-size: 0.85rem; color: #555;"></p>
+      </div>
+
+      <div class="report-filter-bar">
+        <p class="filter-note">Shows every balance that is still unpaid today. Dues are a live snapshot, so there is no date range.</p>
+        <button type="button" class="btn btn-secondary btn-export-report" style="margin-left: auto;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>Export CSV</button>
+        <button type="button" class="btn btn-primary btn-print-report"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-printer"/></svg>Print report</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Patient ID</th>
+              <th>Patient Name</th>
+              <th>Phone</th>
+              <th style="text-align: right;">Visit Due</th>
+              <th style="text-align: right;">Lab Due</th>
+              <th style="text-align: right;">Total Balance Due</th>
+            </tr>
+          </thead>
+          <tbody id="dues-table-body"></tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="3">TOTAL OUTSTANDING</td>
+              <td id="dues-foot-visit" style="text-align: right;">Tk 0</td>
+              <td id="dues-foot-lab" style="text-align: right;">Tk 0</td>
+              <td id="dues-foot-total" style="text-align: right; color: var(--danger-text);">Tk 0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/reports-logic.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

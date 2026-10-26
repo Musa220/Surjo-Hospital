@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surjo Medical Hospital - Lab Orders</title>
+  <meta name="theme-color" content="#0d2b2e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230d2b2e'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23ffa726'/%3E%3Cpath d='M16 4.5v3M16 24.5v3M4.5 16h3M24.5 16h3M7.9 7.9l2.1 2.1M22 22l2.1 2.1M7.9 24.1l2.1-2.1M22 10l2.1-2.1' stroke='%23ffa726' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>(function(){try{var t=localStorage.getItem('smh_theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-lab">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-sun-mark" viewBox="0 0 32 32"><circle cx="16" cy="16" r="5.5" fill="currentColor" stroke="none"/><path d="M16 4.5v3M16 24.5v3M4.5 16h3M24.5 16h3M7.9 7.9l2.1 2.1M22 22l2.1 2.1M7.9 24.1l2.1-2.1M22 10l2.1-2.1"/></symbol>
+    <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></symbol>
+    <symbol id="i-patients" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></symbol>
+    <symbol id="i-visits" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+    <symbol id="i-lab" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+    <symbol id="i-billing" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+    <symbol id="i-banknote" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></symbol>
+    <symbol id="i-reports" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-ai" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  </defs>
+</svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+          <span class="brand-mark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun-mark"/></svg></span>
+          <span class="brand-text"><span class="brand-name">Surjo</span><span class="brand-sub">Medical Hospital</span></span>
+        </a>
+
+      <nav class="main-nav" aria-label="Pages">
+        <a href="index.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-dashboard"/></svg><span>Dashboard</span></a>
+        <div class="nav-sep" role="presentation"></div>
+        <a href="patients.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-patients"/></svg><span>Patients</span></a>
+        <a href="visits.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-visits"/></svg><span>Doctor Visits</span></a>
+        <a href="lab.html" class="active" aria-current="page"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lab"/></svg><span>Lab Orders</span></a>
+        <div class="nav-sep" role="presentation"></div>
+        <a href="billing.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-billing"/></svg><span>Billing &amp; Ledger</span></a>
+        <a href="reports.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-reports"/></svg><span>Reports</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="ai-chat.html" class="ai-card">
+          <span class="ai-spark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-ai"/></svg></span>
+          <span><strong>AI Assistant</strong><small>Ask questions about your reports in plain words</small></span>
+        </a>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="app-main">
+      <header class="topbar">
+        <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+        <a href="index.html" class="brand topbar-brand">
+          <span class="brand-mark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun-mark"/></svg></span>
+          <span class="brand-text"><span class="brand-name">Surjo</span><span class="brand-sub">Medical Hospital</span></span>
+        </a>
+        <nav class="crumbs" aria-label="Breadcrumb"><span>Surjo Medical Hospital</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg><strong>Lab Orders</strong></nav>
+        <form class="top-search" role="search" action="patients.html" method="get">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+          <input type="search" name="q" placeholder="Find a patient by name, ID or phone" aria-label="Find a patient by name, ID or phone" autocomplete="off">
+          <kbd aria-hidden="true">/</kbd>
+        </form>
+        <div class="top-actions">
+          <span class="date-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span id="top-date"></span></span>
+          <button type="button" class="icon-btn theme-toggle" aria-label="Switch to dark theme">
+            <span class="when-light"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg></span>
+            <span class="when-dark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></span>
+          </button>
+          <span class="avatar-chip"><span class="face"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-user"/></svg></span><span class="who">Front desk<small>Reception</small></span></span>
+        </div>
+      </header>
+
+      <main class="main-content" id="main">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Diagnostic Laboratory Orders</h1>
+            <p class="page-subtitle">Order diagnostic investigations, manage requisitions, and record test results</p>
+          </div>
+          <div id="lab-alert" class="toast-slot" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="reports-tabs" role="tablist" aria-label="Laboratory sections">
+          <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-pane="orders">Orders &amp; results</button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" data-pane="catalog">Test catalog &amp; pricing <span class="tab-count" aria-label="active tests"></span></button>
+        </div>
+
+        <!-- ============ TAB 1: ORDERS ============ -->
+        <section class="page-pane active" id="pane-orders">
+        <div class="card form-card">
+          <h2 class="card-title">New lab order requisition</h2>
+          <form id="lab-order-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="lab-patient">Patient <span class="required">*</span></label>
+                <select id="lab-patient" required>
+                  <option value="">Select Patient</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="lab-order-date">Order date <span class="required">*</span></label>
+                <input type="date" id="lab-order-date" required>
+              </div>
+            </div>
+
+            <div class="catalog-head">
+              <h3>Available tests catalog <span class="required" style="color: var(--danger-text);">*</span></h3>
+              <span class="running-total">Selected total: Tk <span id="lab-running-total">0</span><span id="lab-running-save" class="running-save"></span></span>
+            </div>
+            <div class="catalog-tools">
+              <div class="search-field">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+                <input type="text" id="lab-test-search" placeholder="Search tests by name, code or category" aria-label="Search lab tests" autocomplete="off">
+              </div>
+              <a href="#catalog" class="catalog-link" id="link-manage-catalog">Add or edit tests and prices</a>
+            </div>
+            <div id="test-catalog-container"></div>
+
+            <div class="form-actions">
+              <button type="reset" class="btn btn-secondary">Clear</button>
+              <button type="submit" class="btn btn-primary">Create lab order(s)</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="section-head">
+          <h2 class="section-title">Laboratory orders &amp; investigation queue</h2>
+          <div class="search-field">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+            <input type="text" id="lab-order-search" class="search-bar" placeholder="Search patient, order ID or test..." aria-label="Search lab orders">
+          </div>
+          <div class="filter-tabs" role="group" aria-label="Filter lab orders by status">
+            <button type="button" class="filter-btn active" data-filter="All">All</button>
+            <button type="button" class="filter-btn" data-filter="Pending">Pending</button>
+            <button type="button" class="filter-btn" data-filter="Completed">Completed</button>
+            <button type="button" class="filter-btn" data-filter="Cancelled">Cancelled</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="compact-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Order ID</th>
+                <th>Patient</th>
+                <th>Test</th>
+                <th style="text-align: right;">Price</th>
+                <th>Status</th>
+                <th>Result &amp; remarks</th>
+                <th style="text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="lab-orders-table-body"></tbody>
+          </table>
+        </div>
+        </section>
+
+        <!-- ============ TAB 2: TEST CATALOG & PRICING ============ -->
+        <section class="page-pane" id="pane-catalog" aria-label="Lab test catalog and pricing">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Lab test catalog &amp; pricing</h2>
+              <p class="section-note">When the lab starts a new service, add it here and it appears in the order form straight away. Edit a price or give a test a discount at any time. A price change applies to <strong>new orders only</strong>; orders already placed keep the price they were billed at.</p>
+            </div>
+            <div class="action-row">
+              <button type="button" class="btn btn-secondary" id="btn-bulk-discount">Discount many tests</button>
+              <button type="button" class="btn btn-primary" id="btn-add-test"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>Add new test</button>
+            </div>
+          </div>
+
+          <div class="manage-toolbar">
+            <div class="filter-tabs" role="group" aria-label="Filter tests by availability" id="test-filter">
+              <button type="button" class="filter-btn active" data-test-filter="Active">Available <span class="filter-count" data-count-for="Active"></span></button>
+              <button type="button" class="filter-btn" data-test-filter="Disabled">Disabled <span class="filter-count" data-count-for="Disabled"></span></button>
+              <button type="button" class="filter-btn" data-test-filter="All">All <span class="filter-count" data-count-for="All"></span></button>
+            </div>
+            <div class="manage-filters">
+              <select id="test-category-filter" aria-label="Filter by category"></select>
+              <div class="search-field">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+                <input type="text" id="test-search" placeholder="Search by code, name or category" aria-label="Search the test catalog" autocomplete="off">
+              </div>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="manage-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Test</th>
+                  <th>Category</th>
+                  <th style="text-align: right;">List price</th>
+                  <th>Discount</th>
+                  <th style="text-align: right;">Patient pays</th>
+                  <th>Status</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="catalog-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Add / edit test dialog -->
+        <div class="modal-backdrop" id="test-modal">
+          <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="test-modal-title">
+            <h2 id="test-modal-title">Add new test</h2>
+            <p class="modal-desc" id="test-modal-desc">The test appears in the order form as soon as you save it.</p>
+            <form id="test-form" novalidate>
+              <input type="hidden" id="test-edit-code">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="test-code">Test code <span class="required">*</span></label>
+                  <input type="text" id="test-code" placeholder="e.g. USG, ECG, MRI" maxlength="12" autocomplete="off" style="text-transform: uppercase;">
+                </div>
+                <div class="form-group">
+                  <label for="test-category">Category</label>
+                  <input type="text" id="test-category" list="test-category-list" placeholder="e.g. Radiology" maxlength="30" autocomplete="off">
+                  <datalist id="test-category-list"></datalist>
+                </div>
+                <div class="form-group full-width">
+                  <label for="test-name">Test name <span class="required">*</span></label>
+                  <input type="text" id="test-name" placeholder="e.g. Ultrasonography (Whole Abdomen)" maxlength="70" autocomplete="off">
+                </div>
+                <div class="form-group">
+                  <label for="test-price">List price (Tk) <span class="required">*</span></label>
+                  <input type="number" id="test-price" min="0" step="1" placeholder="e.g. 1200">
+                </div>
+                <div class="form-group">
+                  <label for="test-discount">Discount (%)</label>
+                  <input type="number" id="test-discount" min="0" max="100" step="1" placeholder="0">
+                </div>
+                <div class="form-group">
+                  <label for="test-until">Discount valid until</label>
+                  <input type="date" id="test-until">
+                </div>
+                <div class="form-group" id="test-active-group">
+                  <label for="test-active">Availability</label>
+                  <select id="test-active">
+                    <option value="true">Available for new orders</option>
+                    <option value="false">Disabled (hidden from the order form)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="price-preview" id="test-price-preview" aria-live="polite"></div>
+              <p class="field-hint" id="test-price-hint" style="display: none;">A new price or discount applies to new orders only. Orders already placed keep the price they were billed at. Leave "valid until" empty for a discount with no end date.</p>
+              <p class="field-error" id="test-form-error" role="alert" style="display: none;"></p>
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="btn-test-cancel">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="btn-test-save">Save test</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Discount many tests dialog -->
+        <div class="modal-backdrop" id="bulk-modal">
+          <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="bulk-modal-title">
+            <h2 id="bulk-modal-title">Discount many tests</h2>
+            <p class="modal-desc">For a health camp or an offer week: set one discount on a whole category, or on every available test. Enter 0 to remove discounts.</p>
+            <form id="bulk-form" novalidate>
+              <div class="form-grid">
+                <div class="form-group full-width">
+                  <label for="bulk-category">Apply to</label>
+                  <select id="bulk-category"></select>
+                </div>
+                <div class="form-group">
+                  <label for="bulk-percent">Discount (%) <span class="required">*</span></label>
+                  <input type="number" id="bulk-percent" min="0" max="100" step="1" placeholder="e.g. 20">
+                </div>
+                <div class="form-group">
+                  <label for="bulk-until">Valid until</label>
+                  <input type="date" id="bulk-until">
+                </div>
+              </div>
+              <p class="field-hint" style="display: block;">With a "valid until" date the discount switches off by itself after that day. Leave it empty for no end date.</p>
+              <p class="field-error" id="bulk-form-error" role="alert" style="display: none;"></p>
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="btn-bulk-cancel">Cancel</button>
+                <button type="submit" class="btn btn-primary">Apply discount</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Result entry dialog (fixed-position overlay) -->
+        <div class="modal-backdrop" id="result-modal">
+          <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="result-modal-title">
+            <h2 id="result-modal-title">Enter laboratory result</h2>
+            <p id="modal-order-desc" class="modal-desc"></p>
+            <form id="result-form">
+              <input type="hidden" id="modal-order-id">
+              <div class="form-group" style="margin-bottom: 16px;">
+                <label for="modal-result">Clinical result <span class="required">*</span></label>
+                <textarea id="modal-result" rows="3" placeholder="e.g. Total WBC: 7,500 /cu mm, Platelets: 220,000 /cu mm" required></textarea>
+              </div>
+              <div class="form-group" style="margin-bottom: 8px;">
+                <label for="modal-remarks">Remarks (optional)</label>
+                <textarea id="modal-remarks" rows="2" placeholder="e.g. Normal baseline parameters"></textarea>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="btn-close-modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="btn-result-save">Mark as completed</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/reports-logic.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/slips.js"></script>
+  <script src="js/lab.js"></script>
+  <script src="js/lab-catalog.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

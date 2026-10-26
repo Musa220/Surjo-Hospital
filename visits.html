@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surjo Medical Hospital - Doctor Visits</title>
+  <meta name="theme-color" content="#0d2b2e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230d2b2e'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23ffa726'/%3E%3Cpath d='M16 4.5v3M16 24.5v3M4.5 16h3M24.5 16h3M7.9 7.9l2.1 2.1M22 22l2.1 2.1M7.9 24.1l2.1-2.1M22 10l2.1-2.1' stroke='%23ffa726' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>(function(){try{var t=localStorage.getItem('smh_theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-visits">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-sun-mark" viewBox="0 0 32 32"><circle cx="16" cy="16" r="5.5" fill="currentColor" stroke="none"/><path d="M16 4.5v3M16 24.5v3M4.5 16h3M24.5 16h3M7.9 7.9l2.1 2.1M22 22l2.1 2.1M7.9 24.1l2.1-2.1M22 10l2.1-2.1"/></symbol>
+    <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></symbol>
+    <symbol id="i-patients" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></symbol>
+    <symbol id="i-visits" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+    <symbol id="i-lab" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+    <symbol id="i-billing" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+    <symbol id="i-banknote" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></symbol>
+    <symbol id="i-reports" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-ai" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  </defs>
+</svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+          <span class="brand-mark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun-mark"/></svg></span>
+          <span class="brand-text"><span class="brand-name">Surjo</span><span class="brand-sub">Medical Hospital</span></span>
+        </a>
+
+      <nav class="main-nav" aria-label="Pages">
+        <a href="index.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-dashboard"/></svg><span>Dashboard</span></a>
+        <div class="nav-sep" role="presentation"></div>
+        <a href="patients.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-patients"/></svg><span>Patients</span></a>
+        <a href="visits.html" class="active" aria-current="page"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-visits"/></svg><span>Doctor Visits</span></a>
+        <a href="lab.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lab"/></svg><span>Lab Orders</span></a>
+        <div class="nav-sep" role="presentation"></div>
+        <a href="billing.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-billing"/></svg><span>Billing &amp; Ledger</span></a>
+        <a href="reports.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-reports"/></svg><span>Reports</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="ai-chat.html" class="ai-card">
+          <span class="ai-spark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-ai"/></svg></span>
+          <span><strong>AI Assistant</strong><small>Ask questions about your reports in plain words</small></span>
+        </a>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="app-main">
+      <header class="topbar">
+        <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+        <a href="index.html" class="brand topbar-brand">
+          <span class="brand-mark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun-mark"/></svg></span>
+          <span class="brand-text"><span class="brand-name">Surjo</span><span class="brand-sub">Medical Hospital</span></span>
+        </a>
+        <nav class="crumbs" aria-label="Breadcrumb"><span>Surjo Medical Hospital</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg><strong>Doctor Visits</strong></nav>
+        <form class="top-search" role="search" action="patients.html" method="get">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+          <input type="search" name="q" placeholder="Find a patient by name, ID or phone" aria-label="Find a patient by name, ID or phone" autocomplete="off">
+          <kbd aria-hidden="true">/</kbd>
+        </form>
+        <div class="top-actions">
+          <span class="date-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span id="top-date"></span></span>
+          <button type="button" class="icon-btn theme-toggle" aria-label="Switch to dark theme">
+            <span class="when-light"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg></span>
+            <span class="when-dark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></span>
+          </button>
+          <span class="avatar-chip"><span class="face"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-user"/></svg></span><span class="who">Front desk<small>Reception</small></span></span>
+        </div>
+      </header>
+
+      <main class="main-content" id="main">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Doctor Consultation &amp; Visits</h1>
+            <p class="page-subtitle">Log outpatient consultations, clinical notes, and prescriptions</p>
+          </div>
+          <div id="visit-alert" class="toast-slot" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="reports-tabs" role="tablist" aria-label="Doctor visits sections">
+          <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-pane="visits">Consultations</button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" data-pane="doctors">Manage doctors <span class="tab-count" aria-label="active doctors"></span></button>
+        </div>
+
+        <!-- ============ TAB 1: CONSULTATIONS ============ -->
+        <section class="page-pane active" id="pane-visits">
+        <div class="card form-card">
+          <h2 class="card-title">New consultation entry</h2>
+          <form id="visit-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="visit-patient">Patient <span class="required">*</span></label>
+                <select id="visit-patient" required>
+                  <option value="">Select Patient</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="visit-doctor">Doctor <span class="required">*</span></label>
+                <select id="visit-doctor" required>
+                  <option value="">Select Doctor</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="visit-date">Visit date <span class="required">*</span></label>
+                <input type="date" id="visit-date" required>
+              </div>
+
+              <div class="form-group">
+                <label for="visit-fee">Consultation fee (Tk) <span class="required">*</span></label>
+                <input type="number" id="visit-fee" min="0" step="1" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="visit-complaint">Chief complaints <span class="required">*</span></label>
+                <textarea id="visit-complaint" rows="2" placeholder="e.g. High fever, headache, body ache for 3 days" required></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="visit-diagnosis">Clinical diagnosis <span class="required">*</span></label>
+                <textarea id="visit-diagnosis" rows="2" placeholder="e.g. Acute Viral Pharyngitis" required></textarea>
+              </div>
+            </div>
+
+            <div class="med-block">
+              <div class="med-block-head">
+                <h3>Prescribed medicines</h3>
+                <button type="button" id="btn-add-med" class="btn btn-secondary btn-sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>Add medicine</button>
+              </div>
+
+              <div class="med-header">
+                <span>Medicine name</span>
+                <span>Dosage</span>
+                <span>Duration</span>
+                <span></span>
+              </div>
+              <div id="medicines-container"></div>
+            </div>
+
+            <div class="form-actions">
+              <button type="reset" class="btn btn-secondary" id="btn-visit-reset">Clear</button>
+              <button type="submit" class="btn btn-primary">Save visit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Recent consultation history</h2>
+            <p class="section-note" id="visits-count" aria-live="polite"></p>
+          </div>
+          <div class="search-field">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+            <input type="text" id="visit-search" class="search-bar" placeholder="Search patient, visit ID, doctor or diagnosis..." aria-label="Search consultation history">
+          </div>
+        </div>
+
+        <div class="report-filter-bar">
+          <div class="filter-group">
+            <label for="visit-filter-from">From date</label>
+            <input type="date" id="visit-filter-from">
+          </div>
+          <div class="filter-group">
+            <label for="visit-filter-to">To date</label>
+            <input type="date" id="visit-filter-to">
+          </div>
+          <button type="button" class="btn btn-secondary" id="btn-visit-filter-clear">Clear filters</button>
+        </div>
+
+        <div class="table-container">
+          <table class="compact-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Visit ID</th>
+                <th>Patient</th>
+                <th>Doctor</th>
+                <th>Diagnosis</th>
+                <th style="text-align: right;">Fee (Tk)</th>
+                <th style="text-align: right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="visits-table-body"></tbody>
+          </table>
+        </div>
+        </section>
+
+        <!-- ============ TAB 2: MANAGE DOCTORS ============ -->
+        <section class="page-pane" id="pane-doctors" aria-label="Manage doctors">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Hospital doctors</h2>
+              <p class="section-note">Add a new doctor, change a fee or room, or mark a doctor as on leave or left. Only <strong>Active</strong> doctors can be picked for new visits. A doctor who has seen patients is never deleted, so old visits and reports stay correct.</p>
+            </div>
+            <button type="button" class="btn btn-primary" id="btn-add-doctor"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>Add doctor</button>
+          </div>
+
+          <div class="manage-toolbar">
+            <div class="filter-tabs" role="group" aria-label="Filter doctors by status" id="doctor-filter">
+              <button type="button" class="filter-btn active" data-doc-filter="Active">Active <span class="filter-count" data-count-for="Active"></span></button>
+              <button type="button" class="filter-btn" data-doc-filter="On Leave">On leave <span class="filter-count" data-count-for="On Leave"></span></button>
+              <button type="button" class="filter-btn" data-doc-filter="Left">Left <span class="filter-count" data-count-for="Left"></span></button>
+              <button type="button" class="filter-btn" data-doc-filter="All">All <span class="filter-count" data-count-for="All"></span></button>
+            </div>
+            <div class="search-field">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+              <input type="text" id="doctor-search" placeholder="Search by name, specialty or room" aria-label="Search doctors">
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="manage-table">
+              <thead>
+                <tr>
+                  <th>Doctor</th>
+                  <th>Specialty</th>
+                  <th>Room</th>
+                  <th>Visiting days / time</th>
+                  <th style="text-align: right;">Fee (Tk)</th>
+                  <th>Status</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="doctors-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Add / edit doctor dialog -->
+        <div class="modal-backdrop" id="doctor-modal">
+          <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="doctor-modal-title">
+            <h2 id="doctor-modal-title">Add doctor</h2>
+            <p class="modal-desc" id="doctor-modal-desc">Fill in the details. The doctor can be booked for visits straight away.</p>
+            <form id="doctor-form" novalidate>
+              <input type="hidden" id="doctor-edit-id">
+              <div class="form-grid">
+                <div class="form-group full-width">
+                  <label for="doctor-name">Doctor name <span class="required">*</span></label>
+                  <input type="text" id="doctor-name" placeholder="e.g. Dr. Mahbub Alam" maxlength="60" autocomplete="off">
+                </div>
+                <div class="form-group">
+                  <label for="doctor-specialty">Specialty <span class="required">*</span></label>
+                  <input type="text" id="doctor-specialty" list="doctor-specialty-list" placeholder="e.g. Neurology" maxlength="50" autocomplete="off">
+                  <datalist id="doctor-specialty-list"></datalist>
+                </div>
+                <div class="form-group">
+                  <label for="doctor-room">Room</label>
+                  <input type="text" id="doctor-room" placeholder="e.g. Room 305" maxlength="30" autocomplete="off">
+                </div>
+                <div class="form-group">
+                  <label for="doctor-fee">Visit fee (Tk) <span class="required">*</span></label>
+                  <input type="number" id="doctor-fee" min="0" step="1" placeholder="e.g. 700">
+                </div>
+                <div class="form-group">
+                  <label for="doctor-schedule">Visiting days / time</label>
+                  <input type="text" id="doctor-schedule" placeholder="e.g. Sat-Thu, 5-9 PM" maxlength="60" autocomplete="off">
+                </div>
+                <div class="form-group">
+                  <label for="doctor-joined">Joined on</label>
+                  <input type="date" id="doctor-joined">
+                </div>
+                <div class="form-group" id="doctor-status-group">
+                  <label for="doctor-status">Status</label>
+                  <select id="doctor-status">
+                    <option value="Active">Active (can be booked)</option>
+                    <option value="On Leave">On leave (not bookable for now)</option>
+                    <option value="Left">Left the hospital</option>
+                  </select>
+                </div>
+                <div class="form-group" id="doctor-left-group" style="display: none;">
+                  <label for="doctor-left">Last working day</label>
+                  <input type="date" id="doctor-left">
+                </div>
+              </div>
+              <p class="field-hint" id="doctor-fee-hint" style="display: none;">A new fee applies to new visits only. Visits already saved keep the fee they were billed at.</p>
+              <p class="field-error" id="doctor-form-error" role="alert" style="display: none;"></p>
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="btn-doctor-cancel">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="btn-doctor-save">Save doctor</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/reports-logic.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/slips.js"></script>
+  <script src="js/visits.js"></script>
+  <script src="js/doctors.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
